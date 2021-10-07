@@ -52,7 +52,10 @@
               "entryPoints": [
                 {
                   "html": "./src/index.html",
-                  "js": "./src/renderer.js",
+                  "js": "./src/renderer.ts",
+                  "preload": {
+                    "js": "./src/preload.ts"
+                  },
                   "name": "main_window"
                 }
               ]
@@ -69,11 +72,18 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
     "@electron-forge/maker-zip": "^6.0.0-beta.61",
     "@electron-forge/plugin-webpack": "6.0.0-beta.61",
+    "@tsconfig/svelte": "^2.0.1",
     "@vercel/webpack-asset-relocator-loader": "1.7.0",
     "css-loader": "^6.0.0",
     "electron": "15.1.1",
     "node-loader": "^2.0.0",
-    "style-loader": "^3.0.0"
+    "style-loader": "^3.0.0",
+    "svelte": "^3.43.1",
+    "svelte-check": "^2.2.6",
+    "svelte-loader": "^3.1.2",
+    "svelte-preprocess": "^4.9.8",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"

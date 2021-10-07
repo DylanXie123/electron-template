@@ -28,4 +28,10 @@
 
 import './index.css';
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+import App from './App.svelte';
+
+const app = new App({
+	target: document.body
+});
+
+export default app;
