@@ -1,5 +1,5 @@
 <script lang="ts">
-  let name: string = "hello";
+  let name: string = "world";
 
   function toggle() {
     name = name.split("").reverse().join("");

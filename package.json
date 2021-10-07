@@ -1,8 +1,8 @@
 {
-  "name": "learn-electron",
-  "productName": "learn-electron",
+  "name": "electron-template",
+  "productName": "electron-template",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Electron app with electron-forge, svelte, webpack and typescript!",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
