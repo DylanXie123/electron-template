@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from 'electron';
-// import path from 'path';
+import installExtension, { VUEJS3_DEVTOOLS } from 'electron-devtools-installer';
 
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
@@ -50,3 +50,8 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+app.whenReady().then(() => {
+  installExtension(VUEJS3_DEVTOOLS)
+      .then((name) => console.log(`Added Extension:  ${name}`))
+      .catch((err) => console.log('An error occurred: ', err));
+});

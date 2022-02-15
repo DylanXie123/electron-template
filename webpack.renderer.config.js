@@ -1,5 +1,6 @@
 const rules = require('./webpack.rules');
 const { VueLoaderPlugin } = require('vue-loader');
+const webpack = require('webpack');
 
 rules.push(
   {
@@ -11,7 +12,6 @@ rules.push(
     use: {
       loader: 'vue-loader',
     },
-    include: /(src)/,
   }
 );
 
@@ -25,5 +25,9 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false,
+    })
   ]
 };

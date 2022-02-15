@@ -1,16 +1,11 @@
 <template>
-  Hello!
-  <todo-item />
+  <p>This is a todo item</p>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import TodoItem from "./component.vue";
 
 export default defineComponent({
-  name: "App",
-  components: {
-    TodoItem,
-  },
+  name: "todo-item",
 });
 </script>

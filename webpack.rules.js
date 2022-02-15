@@ -25,7 +25,5 @@ module.exports = [
         appendTsSuffixTo: [/\.vue$/],
       },
     },
-
-  }
-
+  },
 ];
