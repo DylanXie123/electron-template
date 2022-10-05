@@ -52,7 +52,10 @@
               "entryPoints": [
                 {
                   "html": "./src/index.html",
-                  "js": "./src/renderer.js",
+                  "js": "./src/renderer.tsx",
+                  "preload": {
+                    "js": "./src/preload.ts"
+                  },
                   "name": "main_window"
                 }
               ]
@@ -69,13 +72,28 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
     "@electron-forge/maker-zip": "^6.0.0-beta.61",
     "@electron-forge/plugin-webpack": "6.0.0-beta.61",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "@vercel/webpack-asset-relocator-loader": "1.7.0",
     "css-loader": "^6.0.0",
-    "electron": "15.1.1",
+    "dotenv-webpack": "^8.0.1",
+    "electron": "16.2.8",
     "node-loader": "^2.0.0",
-    "style-loader": "^3.0.0"
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.0.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "better-sqlite3": "^7.6.2",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "path-browserify": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
+    "simplebar": "^5.3.9"
   }
 }
