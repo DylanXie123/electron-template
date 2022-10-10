@@ -1,0 +1,33 @@
+$primary: rgb(167, 66, 235);
+$secondary: rgb(173, 181, 189);
+$light: rgba(
+  $color: rgb(173, 181, 189),
+  $alpha: 0.3,
+);
+$dark: rgb(26, 33, 41);
+$body-color: rgb(238, 238, 238);
+$body-bg: $dark;
+
+$aspect-ratios: (
+  "1x1": 100%,
+  "4x3": calc(3 / 4 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+  "21x9": calc(9 / 21 * 100%),
+  "2x3": calc(3 / 2 * 100%)
+);
+
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// custom code here
+.simplebar-scrollbar::before {
+  background-color: #a8bbbf;
+}
+.simplebar-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
